@@ -16,7 +16,7 @@ const updateIcal = async () => {
     builder.calname = `${userInfo.firstName} ${userInfo.lastName}`
 
     const scheduleItems = (await quivrAPI.getSchedule(userInfo.access_token)).body[0].scheduleItems
-    console.log(scheduleItems)
+
     for (let item of scheduleItems) {
         builder.events.push({
             start: new Date(item.startDate),
