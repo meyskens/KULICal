@@ -26,7 +26,7 @@ const updateIcal = async () => {
             // Event summary, Required: type String
             summary: item.title,
             // Location of event, optional.
-            location: `${(item.scheduleItemData.locations[0] || {}).buildingName} ${(item.scheduleItemData.locations[0] || {}).roomNumber}`,
+            location: `${(item.scheduleItemData.locations[0] || {}).buildingName || ""} ${(item.scheduleItemData.locations[0] || {}).roomNumber || ""}`,
             // What to do on addition
             method: "PUBLISH",
             // Status of event
